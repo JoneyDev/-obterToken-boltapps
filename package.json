@@ -1,0 +1,22 @@
+{
+  "name": "fivem-token-finder",
+  "version": "1.0.0",
+  "description": "🔑 Bolt Apps - Token Finder | Obtém seu token FiveM automaticamente. Basta abrir o app, entrar no servidor e o token aparece. Interface moderna, leve e sem dependência",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8080 || python -m http.server 8080",
+    "dev": "python3 -m http.server 8080 || python -m http.server 8080"
+  },
+  "keywords": [
+    "fivem",
+    "token",
+    "finder",
+    "bolt-apps"
+  ],
+  "author": "Bolt Apps",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoneyDev/-obterToken-boltapps"
+  }
+}

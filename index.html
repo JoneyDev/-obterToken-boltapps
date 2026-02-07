@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔑 Bolt Apps - Token Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔑 Bolt Apps</h1>
+            <p class="subtitle">Token Finder para FiveM</p>
+        </header>
+
+        <main>
+            <div class="status-card">
+                <div class="status-indicator" id="statusIndicator">
+                    <span class="status-dot"></span>
+                    <span id="statusText">Aguardando conexão...</span>
+                </div>
+            </div>
+
+            <div class="token-card">
+                <h2>Seu Token FiveM</h2>
+                <div class="token-display" id="tokenDisplay">
+                    <span class="token-placeholder">Conecte-se a um servidor para obter o token</span>
+                </div>
+                <button class="btn-copy" id="copyBtn" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copiar Token
+                </button>
+            </div>
+
+            <div class="manual-upload-card">
+                <h3>Carregar Token Manualmente</h3>
+                <p>Se o token não for detectado automaticamente, você pode carregar o arquivo de log do FiveM:</p>
+                <button class="btn-upload" id="uploadBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    Carregar Arquivo de Log
+                </button>
+                <input type="file" id="fileInput" accept=".log,.txt" style="display: none;">
+            </div>
+
+            <div class="instructions-card">
+                <h3>Como usar</h3>
+                <ol>
+                    <li>Mantenha este app aberto</li>
+                    <li>Abra o FiveM e conecte-se a um servidor</li>
+                    <li>O token aparecerá automaticamente aqui</li>
+                    <li>Ou carregue manualmente o arquivo de log</li>
+                    <li>Clique em "Copiar Token" para copiar</li>
+                </ol>
+                <p class="log-path"><strong>Localização dos logs do FiveM:</strong></p>
+                <ul class="log-paths">
+                    <li><strong>Windows:</strong> <code>%LocalAppData%\FiveM\FiveM.app\logs</code></li>
+                    <li><strong>Linux/Mac:</strong> <code>~/.local/share/CitizenFX/logs</code></li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <p><strong>ℹ️ Informação:</strong> Este app monitora os logs do FiveM para extrair seu token de forma automática e segura.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Bolt Apps © 2026 | Interface moderna, leve e sem dependência</p>
+        </footer>
+    </div>
+
+    <script src="token-extractor.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
